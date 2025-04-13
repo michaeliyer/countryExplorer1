@@ -29,6 +29,10 @@ main {
   gap: 2rem;
 }
 
+h3 {
+  color: white;
+}
+
 #countryInfo {
   background: white;
   padding: 2rem;

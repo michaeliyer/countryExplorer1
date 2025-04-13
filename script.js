@@ -1,4 +1,4 @@
-
+console.log("Hello World!");
 const countrySelect = document.getElementById("countrySelect");
 const countryInfo = document.getElementById("countryInfo");
 const countryName = document.getElementById("countryName");
@@ -60,11 +60,11 @@ countrySelect.addEventListener("change", async (e) => {
     map = L.map("map", {
       scrollWheelZoom: true,
       touchZoom: true,
-    //   zoomControl: true,
+      //   zoomControl: true,
       dragging: true,
-      tap: false
+      tap: false,
     }).setView([20, 0], 2);
-  
+
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: "&copy; OpenStreetMap contributors",
     }).addTo(map);
@@ -92,15 +92,13 @@ countrySelect.addEventListener("change", async (e) => {
       },
     }).addTo(map);
 
-
-
     const countryBounds = geoLayer.getBounds();
 
     if (capitalCoords && capitalCoords.length === 2) {
       // Convert capital coords to a LatLngBounds object
       const capitalLatLng = L.latLng(capitalCoords[0], capitalCoords[1]);
       const combinedBounds = L.latLngBounds([countryBounds, capitalLatLng]);
-    
+
       map.flyToBounds(combinedBounds, {
         padding: [20, 20],
         maxZoom: 6,
@@ -111,7 +109,6 @@ countrySelect.addEventListener("change", async (e) => {
         maxZoom: 6,
       });
     }
-
 
     // const bounds = geoLayer.getBounds();
     // map.flyToBounds(bounds, {
@@ -137,5 +134,5 @@ countrySelect.addEventListener("change", async (e) => {
 });
 
 requestAnimationFrame(() => {
-    map.invalidateSize();
-  });
+  map.invalidateSize();
+});
