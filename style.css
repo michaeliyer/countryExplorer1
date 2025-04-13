@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+    background: #f4f4f4;
+    padding: 2rem;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  header h1 {
+    text-align: center;
+  }
+  
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  #countryInfo {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  img#flag {
+    width: 100px;
+    margin-bottom: 1rem;
+  }
+  
+  .hidden {
+    display: none;
+  }

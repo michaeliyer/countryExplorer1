@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Country Explorer</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <header>
+    <h1>🌍 Country Explorer</h1>
+  </header>
+
+  <main>
+    <label for="countrySelect">Select a Country:</label>
+    <select id="countrySelect">
+      <option value="">--Loading countries--</option>
+    </select>
+
+    <div id="countryInfo" class="hidden">
+      <h2 id="countryName"></h2>
+      <img id="flag" src="" alt="Flag" />
+      <p><strong>Capital:</strong> <span id="capital"></span></p>
+      <p><strong>Population:</strong> <span id="population"></span></p>
+      <p><strong>Region:</strong> <span id="region"></span></p>
+      <p><strong>Languages:</strong> <span id="languages"></span></p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
